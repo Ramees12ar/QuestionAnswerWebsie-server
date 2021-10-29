@@ -10,6 +10,7 @@ app.get('/',(req,res)=>{
     res.send('hi');
 })
 
-app.listen('4000', () => {
-    console.log('server running at port 4000')
+const port = process.env.PORT || '4000'
+app.listen(port, (req,res) => {
+    console.log(`server running at port ${port}`)
 })
