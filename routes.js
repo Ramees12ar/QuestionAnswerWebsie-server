@@ -98,6 +98,7 @@ router.post('/submit', async (req, res) => {
             var score = 0
             var total = 0
             questionAns.forEach(async (table, index) => {
+                console.log(reqAns[index].data,table);
                 if (table === reqAns[index].data) {
                     score = score + 1
                 }
